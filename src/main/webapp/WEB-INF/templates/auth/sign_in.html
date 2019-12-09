@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="windows-1251">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width = device-width, initial-scale=1">
-    <title>${title}</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Spring Boot WebSocket Chat Application | CalliCoder</title>
-
     <link type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link type="text/css" href="../../resources/static/css/style.css" rel="stylesheet">
     <script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
     <script src="/webjars/sockjs-client/1.0.2/sockjs.min.js"></script>
     <script src="/webjars/stomp-websocket/2.3.3-1/stomp.min.js"></script>
     <base href="/">
-    <title>Р›РѕРіРёРЅ</title>
+    <title>Логин</title>
 </head>
 <body>
 <form action="/login/process" modelAttribute="userFTL" method="post">
     <div id="username-page">
-        Login : <input name="login" type="login" id="name"/>
+        Имя пользователя : <input name="login" type="login" id="name"/>
     </div>
     <div>
-        Password : <input name="password" type="password"/>
+        Пароль : <input name="password" type="password"/>
     </div>
     <input type="submit" class="accent username-submit">
 </form>
-<button id="sign_up">Р РµРіРёСЃС‚СЂР°С†РёСЏ</button>
+<button id="sign_up">Регистрация</button>
 <script type="text/javascript">
     document.getElementById("sign_up").onclick = function () {
-        location.href = "/users/new";
+        location.href = "/registration";
     };
 </script>
 <script src="../../../resources/static/js/main.js"></script>

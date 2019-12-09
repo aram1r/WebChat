@@ -1,22 +1,16 @@
 package system.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
-import system.bean.HttpSessionBean;
-import system.model.User;
-import system.services.UserService;
-
-import javax.servlet.http.HttpSession;
+import java.security.Principal;
 
 @Controller
 @SessionAttributes("user")
 public class MainController {
 
     @Autowired
-    private UserService userService;
+    ChatController chatController;
 
     @GetMapping("/")
     public String home() {
@@ -24,15 +18,18 @@ public class MainController {
     }
 
     @GetMapping("/chat")
-    public String chat(Model model) {
-        model.addAttribute("nameeeee");
-        return "/chat";
+    public ModelAndView chat(ModelAndView modelAndView, Principal principal) {
+        String data = principal.getName();
+        modelAndView.addObject("login", parsePrincipal(data));
+        modelAndView.setViewName("/chat");
+        return modelAndView;
     }
 
-    @GetMapping("/users")
-    public String getUsers(Model model) {
-        model.addAttribute("users", userService.getAllUsers());
-        return "/users";
+    private String parsePrincipal(String data) {
+        int coma = data.indexOf(",");
+        data = data.substring(coma+1).trim();
+        coma = data.indexOf(",");
+        String login = data.substring(0, coma+1).trim().replaceAll("login=", "").replaceAll("'", "").replaceAll(",", "").trim();
+        return login;
     }
-
 }

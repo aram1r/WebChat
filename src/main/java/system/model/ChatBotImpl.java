@@ -11,15 +11,18 @@ import java.net.URISyntaxException;
 import java.util.*;
 
 @Component
-public class ChatBotImpl implements ChatBot{
-
+public class ChatBotImpl extends User implements ChatBot{
 
     private HashMap<String, ArrayList<String>> links;
     private final String chatBot="@bot";
+
     public ChatBotImpl() {
+        this.setLogin("bot_link");
+        this.setName("bot");
         links = new HashMap<>();
     }
-    public final HashMap<String, String> botCommands = new HashMap<>();
+
+    private final HashMap<String, String> botCommands = new HashMap<>();
 
     {
         botCommands.put("help", "Список команд бота \n");

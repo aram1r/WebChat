@@ -19,6 +19,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+    private String loggedUser;
+
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -34,5 +36,13 @@ public class UserServiceImpl implements UserService {
     public void addUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
+    }
+
+    public void loginEvent(User user) {
+        loggedUser = user.getLogin();
+    }
+
+    public String getLoggedUser() {
+        return loggedUser;
     }
 }

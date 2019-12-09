@@ -8,5 +8,9 @@ public interface UserService {
 
     User getUser(String login);
 
+    void loginEvent(User user);
+
+    String getLoggedUser();
+
     void addUser(User user);
 }

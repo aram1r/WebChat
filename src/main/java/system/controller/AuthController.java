@@ -9,11 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 import system.model.User;
 import system.services.UserService;
 import system.util.UserValidator;
-
 import javax.validation.Valid;
 
 @Controller
-@SessionAttributes("userFTL")
+@SessionAttributes("user")
 public class AuthController {
 
     @Autowired
@@ -22,42 +21,36 @@ public class AuthController {
     @Autowired
     private UserValidator userValidator;
 
-    @GetMapping("/users/new")
+    @GetMapping("/registration")
     public String getSignUp(Model model) {
-        model.addAttribute("user", new User());
         return "/auth/sign_up";
     }
 
-    @PostMapping("/users/new")
-    public String signUp(@ModelAttribute @Valid User user, BindingResult result, Model model) {
+
+    @PostMapping("/registration")
+    public String signUp(@ModelAttribute("user") @Valid User user, BindingResult result, Model model) {
+
         userValidator.validate(user, result);
         if (result.hasErrors()) {
-            return "/auth/sign_up";
+            return "/registration";
         }
+        model.addAttribute("login", user.getLogin());
         userService.addUser(user);
         return "redirect:/login";
     }
 
-//    @RequestMapping("/login")
-//    public String login(@RequestParam(name="error", required=false) Boolean error, Model model) {
-//        if (Boolean.TRUE.equals(error)) {
-//            model.addAttribute("error", true);
-//        }
-//        return "/auth/sign_in";
-//    }
-
     @RequestMapping("/login")
-    public ModelAndView login(@RequestParam(name="error", required=false) Boolean error, Model model, @ModelAttribute("userFTL") User user) {
+    public ModelAndView login(@RequestParam(name="error", required=false) Boolean error, Model model, @ModelAttribute("user") User user) {
         if (Boolean.TRUE.equals(error)) {
             model.addAttribute("error", true);
         }
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("userFTL", user.getLogin());
         modelAndView.setViewName("/auth/sign_in");
         return modelAndView;
     }
 
-    @ModelAttribute("userFTL")
+
+    @ModelAttribute("user")
     public User createUser() {
         return new User();
     }
