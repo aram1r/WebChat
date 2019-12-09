@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ang="ru" xml:lang="ru">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="windows-1251">
+    <meta http-equiv="Content-Type" content="text/html;charset=windows-1251" />
+    <title>Чат</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../../resources/static/css/main.css}"/>
+</head>
+<body>
+    <noscript>
+        <h2>Sorry! Your browser doesn't support Javascript</h2>
+    </noscript>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item col-sm">
+                <span>Пользователи онлайн</span>
+                <span id="usersOnlineList"></span>
+                <button onClick="window.location.href='/logout'">Покинуть чат</button>
+        </li>
+        <li class="list-group-item col-sm">
+            <div id="chat-page" class="hidden">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h5 id="login" th:text="${login}"></h5>
+                    </div>
+                    <ul id="messageArea">
+                    </ul>
+                    <form id="messageForm" name="messageForm">
+                        <div class="form-group">
+                            <div class="input-group clearfix">
+                                <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                                <button type="submit" class="primary">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li class = "col-sm">
+
+        </li>
+    </ul>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="../../resources/static/js/main.js"></script>
+</body>
+</html>

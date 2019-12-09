@@ -6,34 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344e3950-5a2d-4098-84b8-df8d54f43942" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/bean/HttpSessionBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/config/WebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/config/WebAppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/HttpSessionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/model/ChatBotImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/model/ChatBotImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/model/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/model/ChatMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/servlet/HttpSessionServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/auth/sign_in.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/auth/sign_in.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/auth/sign_in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/auth/sign_up.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/chat.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/main-template.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/users.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/static/js/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="344e3950-5a2d-4098-84b8-df8d54f43942" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +292,7 @@
       <workItem from="1575648350663" duration="4590000" />
       <workItem from="1575817745302" duration="11925000" />
       <workItem from="1575842359897" duration="13466000" />
-      <workItem from="1575885757806" duration="7244000" />
+      <workItem from="1575885757806" duration="7935000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.5">
       <created>1575651783782</created>
@@ -328,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575651783782</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v0.1">
+      <created>1575894267126</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575894267127</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -358,7 +338,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0.0.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.5" />
+    <MESSAGE value="v0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
