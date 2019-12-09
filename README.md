@@ -6,11 +6,11 @@ h4 Реализация приложения вебчата на SpringMVC+Webso
 =====================
 Создано с помощью Intellij Idea Ultimate 2019.2.4
 =====================
--[Страница логина](http://localhost:8080/login)
--[Страница чата](http://localhost:8080/chat)
--[Страница регистрации](http://localhost:8080/registration)
+-[Страница логина](http://localhost:8080/login)  
+-[Страница чата](http://localhost:8080/chat)  
+-[Страница регистрации](http://localhost:8080/registration)  
 =====================
-Команды чат бота:
--@bot link - ссылка на статью на сайте habr.com;
--@bot reset - сброс списка сайтов;
--@bot help - команды бота;
+Команды чат бота:  
+-@bot link - ссылка на статью на сайте habr.com;  
+-@bot reset - сброс списка сайтов;  
+-@bot help - команды бота;  
